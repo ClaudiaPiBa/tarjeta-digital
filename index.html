@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarjeta Digital (Demo)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="Tarjeta digital demo">
+      <header class="header">
+        <div class="avatar">
+          <img
+            src="user.png"
+            alt="Foto de perfil"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="title">
+          <h1>Juan Pérez</h1>
+          <p class="role">Especialista / Área</p>
+        </div>
+
+        <button class="theme" id="themeBtn" type="button" aria-label="Cambiar tema">
+          <span class="dot" aria-hidden="true"></span>
+        </button>
+      </header>
+
+      <section class="quick" aria-label="Acciones rápidas">
+        <button class="pill" data-action="whatsapp" type="button">
+          <span class="ico">💬</span> WhatsApp
+        </button>
+        <button class="pill" data-action="call" type="button">
+          <span class="ico">📞</span> Llamar
+        </button>
+        <button class="pill" data-action="email" type="button">
+          <span class="ico">✉️</span> Email
+        </button>
+      </section>
+
+      <section class="grid" aria-label="Redes y enlaces">
+        <a class="iconBtn" href="#" data-link="linkedin" aria-label="LinkedIn">
+          <span class="icon">in</span><span class="label">LinkedIn</span>
+        </a>
+        <a class="iconBtn" href="#" data-link="instagram" aria-label="Instagram">
+          <span class="icon">◎</span><span class="label">Instagram</span>
+        </a>
+        <a class="iconBtn" href="#" data-link="website" aria-label="Sitio web">
+          <span class="icon">⌂</span><span class="label">Web</span>
+        </a>
+        <button class="iconBtn" type="button" id="copyBtn" aria-label="Copiar correo">
+          <span class="icon">⎘</span><span class="label">Copiar mail</span>
+        </button>
+      </section>
+
+      <section class="info" aria-label="Datos copiables">
+        <div class="line">
+          <span class="k">Tel:</span>
+          <span class="v" id="phoneTxt">55 1234 5678</span>
+          <button class="mini" type="button" data-copy="#phoneTxt">Copiar</button>
+        </div>
+
+        <div class="line">
+          <span class="k">Mail:</span>
+          <span class="v" id="emailTxt">hola@tudominio.com</span>
+          <button class="mini" type="button" data-copy="#emailTxt">Copiar</button>
+        </div>
+
+        <div class="line">
+          <span class="k">Web:</span>
+          <span class="v" id="webTxt">example.com</span>
+          <button class="mini" type="button" data-copy="#webTxt">Copiar</button>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accBtn" type="button" aria-expanded="false" aria-controls="acc1" id="accBtn1">
+          Áreas / Servicios
+          <span class="chev" aria-hidden="true">⌄</span>
+        </button>
+        <div class="accPanel" id="acc1" role="region" aria-labelledby="accBtn1">
+          <ul class="tags">
+            <li>Consultoría</li><li>Investigación</li><li>Planeación</li><li>Proyectos</li>
+            <li>Docencia</li><li>Análisis</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="Acciones finales">
+        <button class="primary" id="saveContactBtn" type="button">
+          Guardar contacto
+        </button>
+
+        <a class="secondary" href="#" data-link="pdfcv" aria-label="Ver CV (PDF)">Ver CV</a>
+
+        <button class="secondary" id="shareBtn" type="button">
+          Compartir
+        </button>
+
+        <button class="secondary" id="openSheetBtn" type="button">
+          Menú
+        </button>
+      </section>
+
+      <footer class="foot">
+        <small>Demo interactivo (referencia). El diseño final se ajusta al branding.</small>
+      </footer>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+  <div class="sheetOverlay" id="sheetOverlay" hidden></div>
+
+  <aside class="sheet" id="sheet" aria-hidden="true" aria-label="Menú de acciones">
+    <div class="sheetHandle" id="sheetHandle" aria-hidden="true"></div>
+
+    <div class="sheetHeader">
+      <div class="sheetTitle">Acciones</div>
+      <button class="sheetClose" id="closeSheetBtn" type="button" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="sheetBody">
+      <a class="sheetItem" href="#" data-action="call">
+        <span class="sheetIcon">📞</span>
+        <span>
+          <strong>Llamar</strong><br>
+          <small>+52 55 1234 5678</small>
+        </span>
+      </a>
+
+      <a class="sheetItem" href="#" data-action="whatsapp">
+        <span class="sheetIcon">💬</span>
+        <span>
+          <strong>WhatsApp</strong><br>
+          <small>Enviar mensaje</small>
+        </span>
+      </a>
+
+      <a class="sheetItem" href="#" data-action="email">
+        <span class="sheetIcon">✉️</span>
+        <span>
+          <strong>Email</strong><br>
+          <small>hola@tudominio.com</small>
+        </span>
+      </a>
+
+      <button class="sheetItem" type="button" id="saveContactFromSheet">
+        <span class="sheetIcon">📇</span>
+        <span>
+          <strong>Guardar contacto</strong><br>
+          <small>Descarga vCard (.vcf)</small>
+        </span>
+      </button>
+
+      <button class="sheetItem" type="button" id="shareFromSheet">
+        <span class="sheetIcon">↗</span>
+        <span>
+          <strong>Compartir</strong><br>
+          <small>Enviar esta tarjeta</small>
+        </span>
+      </button>
+
+      <a class="sheetItem" href="#" data-link="linkedin">
+        <span class="sheetIcon">in</span>
+        <span>
+          <strong>LinkedIn</strong><br>
+          <small>Ver perfil</small>
+        </span>
+      </a>
+    </div>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>
+</html>
