@@ -188,7 +188,7 @@ window.addEventListener("resize", () => {
 // ===== Save contact =====
 function saveContact(){
   const vcf = buildVCard(DATA.vcard);
-  download("contacto.vcf", vcf, "text/vcard");
+  download("juan-perez.vcf", vcf, "text/vcard");
   toast("Contacto descargado 📇");
 }
 $("#saveContactBtn")?.addEventListener("click", saveContact);
