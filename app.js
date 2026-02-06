@@ -1,6 +1,6 @@
 // ===== Demo data =====
 const DATA = {
-  phone: "5512345678",
+  phone: "5581451364",
   email: "hola@tudominio.com",
   whatsappText: "Hola, vi tu tarjeta digital 🙂",
   links: {
@@ -10,8 +10,8 @@ const DATA = {
     pdfcv: "https://example.com/cv.pdf"
   },
   vcard: {
-    firstName: "Ana",
-    lastName: "Laura",
+    firstName: "Juan",
+    lastName: "Pérez",
     org: "Equipo / Organización",
     title: "Especialista",
     phone: "+52 55 1234 5678",
