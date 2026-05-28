@@ -14,7 +14,7 @@ const DATA = {
 
   links: {
     linkedin: "https://www.linkedin.com/in/alejandro-flores-pati%C3%B1o-86101055/?skipRedirect=true",
-    pdfcv: "/storylaw/alejandro-flores/assets/cv/CV_Alejandro_Flores_Patino.pdf"
+    pdfcv: "./assets/cv/CV_Alejandro_Flores_Patino.pdf"
   },
 
 vcard: {
@@ -37,7 +37,7 @@ vcard: {
 
   linkedin: "https://www.linkedin.com/in/alejandro-flores-pati%C3%B1o-86101055/?skipRedirect=true",
 
-  photo: "/storylaw/alejandro-flores/assets/img/foto-Ale.jpeg",
+  photo: "assets/img/foto-ale.jpg",
 
   address: {
     street: "Campeche 315 Piso 3",
