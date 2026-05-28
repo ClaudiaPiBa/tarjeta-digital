@@ -78,7 +78,7 @@ body {
   background:
     linear-gradient(rgba(0, 0, 0, .18),
       rgba(0, 0, 0, .18)),
-    url('/storylaw/alejandro-flores/assets/img/back.png');
+    url('../assets/img/back.png');
 
   background-size: cover;
   background-position: center;
@@ -564,8 +564,9 @@ a:focus-visible {
 
 .v {
   font-weight: 800;
-
   font-size: 13px;
+  color: #011c46 !important;
+  text-decoration: none !important;
 }
 
 .mini {
