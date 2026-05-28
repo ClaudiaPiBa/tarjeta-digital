@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarjeta Digital (Demo)</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Claudia Piñas">
+  <meta property="og:title" content="Claudia Piñas">
+  <!-- <meta property="og:description" content="Tarjeta digital con WhatsApp, llamada, email, guardar contacto y más."> -->
+  <meta property="og:url" content="https://claudiapiba.github.io/tarjeta-digital/">
+  <meta property="og:image" content="https://claudiapiba.github.io/tarjeta-digital/preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claudia Piñas">
+  <!-- <meta name="twitter:description" content="Tarjeta digital con WhatsApp, llamada, email y guardar contacto."> -->
+  <meta name="twitter:image" content="https://claudiapiba.github.io/tarjeta-digital/preview.png">
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" aria-label="Tarjeta digital demo">
+      <!-- HEADER -->
+      <header class="hero-section">
+
+        <div class="hero-bg"></div>
+
+        <!-- <div class="logo-firm">
+        <h5>LOPERENA LERCH </h5>
+        <span>Y MARTÍN DEL CAMPO</span>
+      </div> -->
+
+        <div class="profile-wrapper">
+
+          <img src="/storylaw/alejandro-perez/assets/img/foto-Ale.jpeg" alt="Juan Pérez" class="profile-img">
+
+        </div>
+
+      </header>
+
+      <!-- INFO -->
+      <section class="info-section">
+
+        <h1 class="name">
+          Alejandro Flores Patiño
+        </h1>
+        
+        <div class="flex-center">
+        <div class="divider"></div>
+        <p class="position">
+          Socio
+        </p>
+        <div class="divider"></div>
+        </div>
+
+        <h4 class="firm-name">
+          Loperena Lerch
+        </h4>
+
+        <p class="firm-subtitle">
+          y Martín del Campo
+        </p>
+
+      </section>
+
+      <section class="quick" aria-label="Acciones rápidas">
+        <button class="pill">
+          <img class="icon-btn-whats" src="/storylaw/assets/icons/whatsapp.svg" alt="WhatsApp">
+
+          <span>
+            WhatsApp
+            <small>Celular</small>
+          </span>
+        </button>
+
+        <button class="pill">
+          <img class="icon-btn-white" src="/storylaw/assets/icons/call.svg" alt="Llamar">
+
+          <span>
+            Oficina
+            <small>Ext. 114</small>
+          </span>
+        </button>
+        <button class="pill" data-action="email" type="button">
+          <img class="icon-btn-white" src="/storylaw/assets/icons/email.svg" alt="Email">
+          Email
+        </button>
+      </section>
+
+      <section class="grid" aria-label="Redes y enlaces">
+        <a class="iconBtn" href="#" data-link="linkedin" aria-label="LinkedIn">
+          <img src="/storylaw/assets/icons/linkedin.svg" alt="LinkedIn"> <span class="label">LinkedIn</span>
+        </a>
+        <!-- <a class="iconBtn" href="#" data-link="instagram" aria-label="Instagram">
+          <span class="icon">◎</span><span class="label">Instagram</span>
+        </a>
+        <a class="iconBtn" href="#" data-link="website" aria-label="Sitio web">
+          <span class="icon">⌂</span><span class="label">Web</span>
+        </a> -->
+        <button class="iconBtn" type="button" id="copyBtn" aria-label="Copiar correo">
+          <img class="icon-copy" src="/storylaw/assets/icons/copy.svg" alt="Copiar"> <span class="label">Copiar email</span>
+        </button>
+      </section>
+
+      <section class="info" aria-label="Datos copiables">
+        <div class="line">
+            <img class="icon-circle" src="/storylaw/assets/icons/cel.svg" alt="Celular">
+            <div class="flex-start-column">
+              <span class="k">Celular/WhatsApp</span>
+              <span class="v" id="phoneTxt">55 3082 0068</span>
+            </div>
+          <button class="mini" type="button" data-copy="#phoneTxt">Copiar</button>
+        </div>
+
+        <div class="line">
+          <img class="icon-circle" src="/storylaw/assets/icons/deskphone.svg" alt="Teléfono de oficina">
+          <div class="flex-start-column">
+            <span class="k">Oficina Ext. 114</span>
+            <span class="v" id="deskphoneTxt">55 52 86 90 86</span>
+          </div>
+          <button class="mini" type="button" data-copy="#deskphoneTxt">Copiar</button>
+        </div>
+
+        <div class="line">
+          <img class="icon-circle" src="/storylaw/assets/icons/email.svg" alt="Email">
+          <div class="flex-start-column">
+            <span class="k">Email</span>
+            <span class="v" id="emailTxt">alejandro.flores@loperena.mx</span>
+          </div>
+          <button class="mini" type="button" data-copy="#emailTxt">Copiar</button>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <button class="accBtn" type="button" aria-expanded="false" aria-controls="acc1" id="accBtn1">
+          Áreas / Servicios
+          <span class="chev" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 10L12 15L17 10"/>
+  </svg>
+</span>
+        </button>
+        <div class="accPanel" id="acc1" role="region" aria-labelledby="accBtn1">
+<ul class="tags">
+
+  <li>Arbitraje comercial</li>
+
+  <li>Derecho corporativo</li>
+
+  <li>Propiedad industrial</li>
+
+  <li>Derechos de autor</li>
+
+  <li>Derecho contractual</li>
+
+  <li>Joint venture</li>
+
+  <li>Fideicomisos</li>
+
+  <li>Compraventa de acciones</li>
+
+  <li>Distribución</li>
+
+  <li>Transferencia de tecnología</li>
+
+  <li>Datos personales</li>
+
+  <li>Regulación</li>
+
+  <li>Cumplimiento legal</li>
+
+</ul>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="Acciones finales">
+        <button class="secondary" id="saveContactBtn" type="button">
+          Guardar contacto
+        </button>
+
+        <a
+  class="secondary"
+  href="/storylaw/alejandro-perez/assets/cv/CV_Alejandro_Flores_Patino.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver CV
+</a>
+
+        <button class="secondary" id="shareBtn" type="button">
+          Compartir
+        </button>
+
+      </section>
+
+<!-- MAP -->
+<section class="map-section container">
+
+  <div class="section-title">
+
+    <i class="bi bi-geo-alt-fill"></i>
+
+    <span>Ubicación del despacho</span>
+
+  </div>
+
+  <div class="map-wrapper">
+
+    <iframe
+      src="https://www.google.com/maps?q=Campeche+315+Piso+3+Hip%C3%B3dromo+Condesa+Cuauht%C3%A9moc+06170+Ciudad+de+M%C3%A9xico+CDMX&output=embed"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+  <p class="address">
+    Campeche 315 · Piso 3 <br>
+    Hipódromo Condesa <br>
+    Cuauhtémoc, CDMX 06170
+  </p>
+
+  <div class="flex-center btn-address">
+
+    <div class="col-6">
+
+      <button
+        class="secondary copy-button"
+        data-copy="Campeche 315 piso 3, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX">
+
+        <i class="bi bi-copy"></i>
+
+        Copiar
+
+      </button>
+
+    </div>
+
+    <div class="col-6">
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Campeche+315+Piso+3+Hip%C3%B3dromo+Condesa+Cuauht%C3%A9moc+06170+Ciudad+de+M%C3%A9xico+CDMX"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="secondary">
+
+        <i class="bi bi-geo-alt-fill"></i>
+
+        Maps
+
+      </a>
+
+    </div>
+
+    <div class="col-6">
+
+  <a
+    href="https://waze.com/ul?q=Campeche+315+Piso+3+Hipódromo+Condesa+Cuauhtémoc+CDMX&navigate=yes"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="secondary">
+
+    <i class="bi bi-sign-turn-right-fill"></i>
+
+    Waze
+
+  </a>
+
+</div>
+
+  </div>
+
+</section>
+
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+
+
+  <script src="/storylaw/alejandro-perez/js/main.js"></script>
+</body>
+
+</html>

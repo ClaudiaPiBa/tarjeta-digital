@@ -6,7 +6,7 @@ const DATA = {
   links: {
     linkedin: "https://www.linkedin.com/",
     instagram: "https://www.instagram.com/",
-    website: "https://example.com",
+    website: "https://claudiapiba.github.io/tarjeta-digital/",
     pdfcv: "https://example.com/cv.pdf"
   },
   vcard: {
@@ -16,7 +16,7 @@ const DATA = {
     title: "Especialista",
     phone: "+52 55 1234 5678",
     email: "hola@tudominio.com",
-    url: "https://example.com"
+    url: "https://claudiapiba.github.io/tarjeta-digital/"
   }
 };
 
