@@ -37,7 +37,7 @@ vcard: {
 
   linkedin: "https://www.linkedin.com/in/alejandro-flores-pati%C3%B1o-86101055/?skipRedirect=true",
 
-  photo: "./assets/img/foto-ale.jpg",
+  photo: "./assets/img/foto-ale.jpeg",
 
   address: {
     street: "Campeche 315 Piso 3",
