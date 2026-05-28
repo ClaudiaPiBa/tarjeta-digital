@@ -37,7 +37,7 @@ vcard: {
 
   linkedin: "https://www.linkedin.com/in/alejandro-flores-pati%C3%B1o-86101055/?skipRedirect=true",
 
-  photo: "./assets/img/foto-ale.jpeg",
+  photo: "https://claudiapiba.github.io/storylaw/alejandro-perez/assets/img/foto-Ale.jpeg",
 
   address: {
     street: "Campeche 315 Piso 3",
@@ -111,7 +111,7 @@ async function buildVCard(v){
         await imageToBase64(v.photo);
 
       photoLine =
-        `PHOTO;ENCODING=b;TYPE=JPEG:${base64}`;
+  `PHOTO:data:image/jpeg;base64,${base64}`;
 
     }catch(error){
 
